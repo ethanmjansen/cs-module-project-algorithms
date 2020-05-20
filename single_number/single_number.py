@@ -4,9 +4,12 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
-
+    for i in arr:
+        count = arr.count(i)
+        if count == 1:
+            odd_number_out = i
+        
+    return odd_number_out
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
