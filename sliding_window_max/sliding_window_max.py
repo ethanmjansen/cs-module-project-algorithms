@@ -4,8 +4,18 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    new_arr = []
 
-    pass
+    pointer_1 = 0
+    pointer_2 = k - 1
+    while pointer_2 != len(nums):
+        temp_list = nums[pointer_1:pointer_2 + 1]
+        max_of_window = max(temp_list)
+        pointer_1 += 1
+        pointer_2 += 1
+        new_arr.append(max_of_window)
+
+    return new_arr
 
 
 if __name__ == '__main__':
